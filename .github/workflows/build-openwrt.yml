@@ -92,10 +92,10 @@ jobs:
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
 
     - name: Download package
-      id: package
+      #id: package
       #run: |
-       # cd openwrt
-       # make defconfig
+       #cd openwrt
+       #make defconfig
         #make download -j8
         #find dl -size -1024c -exec ls -l {} \;
         #find dl -size -1024c -exec rm -f {} \;
