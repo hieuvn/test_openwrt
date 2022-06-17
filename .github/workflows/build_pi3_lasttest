@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build_pi3_lasttest
+name: build_pi3_lasttest
 
 on:
   repository_dispatch:
