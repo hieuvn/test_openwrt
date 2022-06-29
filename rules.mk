@@ -7,7 +7,7 @@ ifneq ($(__rules_inc),1)
 __rules_inc=1
 
 ifeq ($(DUMP),)
-  -include $(TOPDIR)/.config
+  -include $(TOPDIR)/configs/rpi3.config
 endif
 include $(TOPDIR)/include/debug.mk
 include $(TOPDIR)/include/verbose.mk
