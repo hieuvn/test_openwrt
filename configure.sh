@@ -9,5 +9,5 @@ sed -i 's/ImmortalWrt/KTMWrt/g' package/base-files/files/bin/config_generate
 sed -i 's/UTC/<+07>-7/g' package/base-files/files/bin/config_generate
 
 # passwall
-echo "src-git kenzok8 https://github.com/kenzok8/openwrt-packages" >> feeds.conf.default
+# echo "src-git kenzok8 https://github.com/kenzok8/openwrt-packages" >> feeds.conf.default
 echo "src-git modeminfo https://github.com/koshev-msk/luci-app-modeminfo.git" >> feeds.conf.default
