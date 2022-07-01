@@ -11,17 +11,17 @@
 #
 
 # Uncomment a feed source
-#sed -i "/helloworld/d" "feeds.conf.default"
-#echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
+sed -i "/helloworld/d" "feeds.conf.default"
+echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
 
 #check library
-#mkdir -p package/helloworld
-#for i in "dns2socks" "microsocks" "ipt2socks" "pdnsd-alt" "redsocks2"; do \
-#  svn checkout "https://github.com/immortalwrt/packages/trunk/net/$i" "package/helloworld/$i"; \
-#done
+mkdir -p package/helloworld
+for i in "dns2socks" "microsocks" "ipt2socks" "pdnsd-alt" "redsocks2"; do \
+  svn checkout "https://github.com/immortalwrt/packages/trunk/net/$i" "package/helloworld/$i"; \
+done
 
 #update lai
-#./scripts/feeds update helloworld
-#./scripts/feeds install -a -f -p helloworld
+./scripts/feeds update helloworld
+./scripts/feeds install -a -f -p helloworld
 
 
