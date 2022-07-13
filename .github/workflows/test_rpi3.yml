@@ -54,14 +54,7 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
     
-    #- name: Generate Toolchain Config
-      #run: |
-          #[ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-          #echo -e "\nCONFIG_ALL=y" >> openwrt/.config
-          #echo -e "\nCONFIG_ALL_NONSHARED=y" >> openwrt/.config
-          #cd $OPENWRT_ROOT_PATH
-          #make defconfig > /dev/null 2>&1
-          
+              
     - name: Load custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
@@ -75,19 +68,7 @@ jobs:
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
       
-    - name: install Tools
-      run: |
-          cd openwrt
-          echo -e "$(nproc) thread install"
-          make tools/install -j$(nproc) || make tools/install -j1 V=s
-          
-    - name: install Toolchain
-      run: |
-          cd openwrt
-          echo -e "$(nproc) thread install"
-          make toolchain/install -j$(nproc) || make toolchain/install -j1 V=s
-          #rm -rf .config* dl bin
-
+    
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
