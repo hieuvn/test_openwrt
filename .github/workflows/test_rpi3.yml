@@ -75,18 +75,18 @@ jobs:
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
       
-    - name: Compile Tools
+    - name: install Tools
       run: |
           cd openwrt
-          echo -e "$(nproc) thread compile"
-          make tools/compile -j$(nproc) || make tools/compile -j1 V=s
+          echo -e "$(nproc) thread install"
+          make tools/install -j$(nproc) || make tools/install -j1 V=s
           
-    - name: Compile Toolchain
+    - name: install Toolchain
       run: |
           cd openwrt
-          echo -e "$(nproc) thread compile"
-          make toolchain/compile -j$(nproc) || make toolchain/compile -j1 V=s
-          rm -rf .config* dl bin
+          echo -e "$(nproc) thread install"
+          make toolchain/install -j$(nproc) || make toolchain/install -j1 V=s
+          #rm -rf .config* dl bin
 
     - name: Load custom configuration
       run: |
