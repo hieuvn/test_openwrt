@@ -12,8 +12,7 @@
 
 # Uncomment a feed source
 #smstools3
-cd feeds/luci/applications/
-git clone https://github.com/koshev-msk/luci-app-smstools3.git
+git clone --depth=1 https://github.com/koshev-msk/luci-app-smstools3 package/luci-app-smstools3
 
 #helloworld
 sed -i "/helloworld/d" "feeds.conf.default"
