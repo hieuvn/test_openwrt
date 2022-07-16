@@ -15,8 +15,8 @@
 git clone --depth=1 https://github.com/koshev-msk/luci-app-smstools3 package/luci-app-smstools3
 
 #helloworld
-sed -i "/helloworld/d" "feeds.conf.default"
-echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
+rm -rf package/helloworld
+git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 
 #check library
 mkdir -p package/helloworld
