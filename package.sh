@@ -10,5 +10,5 @@ git clone --depth=1 https://github.com/koshev-msk/luci-app-mmconfig
 #mv $GITHUB_WORKSPACE/package/luci-app-ktm-tools .
 
 #clone helloworld
-rm -rf package/helloworld
-git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
+#rm -rf package/helloworld
+#git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
