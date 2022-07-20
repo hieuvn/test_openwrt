@@ -16,7 +16,7 @@ env:
   REPO_URL: 'https://github.com/immortalwrt/immortalwrt.git'
   REPO_BRANCH: 'openwrt-21.02'
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: configs/rpi3.config
+  CONFIG_FILE: configs/sulinggg_rpi3.config
   SYS_CONF_SH: configure.sh
   PACKS: package.sh
   UPLOAD_BIN_DIR: false
