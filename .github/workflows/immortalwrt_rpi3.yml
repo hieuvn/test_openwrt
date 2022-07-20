@@ -77,17 +77,17 @@ jobs:
         $GITHUB_WORKSPACE/$PACKS
 
     
-    - name: Download package
-      id: package
-      run: |
-         cd immortalwrt
-         make defconfig
-         make download -j8
-         find dl -size -1024c -exec ls -l {} \;
-         find dl -size -1024c -exec rm -f {} \;
+    #- name: Download package
+      #id: package
+      #run: |
+         #cd immortalwrt
+         #make defconfig
+         #make download -j8
+         #find dl -size -1024c -exec ls -l {} \;
+         #find dl -size -1024c -exec rm -f {} \;
 
-         rm -rf package/lean/default-settings
-         mv $GITHUB_WORKSPACE/default-settings package/lean/
+         #rm -rf package/lean/default-settings
+         #mv $GITHUB_WORKSPACE/default-settings package/lean/
 
     - name: Compile the firmware
       id: compile
